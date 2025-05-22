@@ -1,4 +1,22 @@
 baseURL: https://throughthelens.ch
 languageCode: de-ch
-title: Through The Lens Fotografie by Martin Splitt
+title: Through The Lens Photography by Martin Splitt
 theme: tella
+
+DefaultContentLanguage: "de"
+enableInlineShortcodes: true
+
+params:
+  site:
+    name: "Through The Lens by Martin Splitt"
+
+menu:
+  main:
+    - id: services
+      name: Angebot
+      url: /angebot
+      weight: 1
+    - id: about
+      name: Ueber mich
+      url: /ueber-mich
+      weight: 2
