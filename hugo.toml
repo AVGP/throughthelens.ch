@@ -27,22 +27,22 @@ title = 'Through The Lens Photography by Martin Splitt'
 #  facebook = "throughthelens-ch"
   instagram = "throughthelens.ch"
   500px = "throughthelens-ch"
-  bluesky = "throughthelens-ch"
+  bluesky = "throughthelens.ch"
 
-[[menu.main]]
-    name = "Portraits"
-    url = "/portrait-fotografie"
-    weight = 1
+# [[menu.main]]
+#     name = "Portraits"
+#     url = "/portrait-fotografie"
+#     weight = 1
 
-[[menu.main]]
-    name = "Event Fotografie"
-    url = "/event-fotografie"
-    weight = 2
+# [[menu.main]]
+#     name = "Event Fotografie"
+#     url = "/event-fotografie"
+#     weight = 2
 
-[[menu.main]]
-    name = "Luftaufnahmen"
-    url = "/luftaufnahmen"
-    weight = 3
+# [[menu.main]]
+#     name = "Luftaufnahmen"
+#     url = "/luftaufnahmen"
+#     weight = 3
 
 [[menu.main]]
     name = "Über mich"
