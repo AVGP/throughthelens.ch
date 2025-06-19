@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Image2Go</title>
+
+    <style>
+      :root {
+        --color-bg: #69F7BE;
+        --color-text-main: #000000;
+        --color-text-header: #2800FF;
+        --color-primary: #FFFF00;
+        --wrapper-height: 87vh;
+        --image-max-width: 300px;
+        --image-margin: 3rem;
+        --font-family: "HK Grotesk";
+        --font-family-header: "HK Grotesk";
+      }
+
+      /* Basic page style resets */
+      * {
+        box-sizing: border-box;
+      }
+      [hidden] {
+        display: none !important;
+      }
+
+      @import url('https://fonts.cdnfonts.com/css/hk-groteks');
+
+      body {
+        font-family: HK Grotesk;
+        background-color: var(--color-bg);
+      }
+
+      button,
+      input {
+        font-family: inherit;
+        font-size: 100%;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        transition: 500ms;
+      }
+
+      input { display: block; }
+    </style>
+  </head>
+  <body>
+    <form method="post" enctype="multipart/form-data" action="https://image2go-711231798250.europe-west6.run.app/">
+      <p>
+        <label>
+          Model Release
+          <input type="file" name="model_release">
+        </label>        
+      </p>
+      <p>
+        <label>
+          Photo
+          <input type="file" name="photo">
+        </label>        
+      </p>
+      <p>
+        <button type="submit">
+          Upload
+        </button>
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+baseURL = 'https://throughthelens.ch'
+languageCode = 'de-ch'
+title = 'Through The Lens Photography by Martin Splitt'
+
+[Params]
+#  homeTitle = "Beautiful Hugo Theme" # Set a different text for the header on the home page
+  subtitle = "Augenblicke für die Ewigkeit"
+  mainSections = ["post","posts"]
+  logo = "img/logo.png" # Expecting square dimensions
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+
+[Params.author]
+  # Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
+  name = "Martin Splitt"
+  website = "throughthelens.ch"
+  email = "info@throughthelens.ch"
+#  facebook = "throughthelens-ch"
+  instagram = "throughthelens.ch"
+  500px = "throughthelens-ch"
+  bluesky = "throughthelens-ch"
+
+[[menu.main]]
+    name = "Portraits"
+    url = "/portrait-fotografie"
+    weight = 1
+
+[[menu.main]]
+    name = "Event Fotografie"
+    url = "/event-fotografie"
+    weight = 2
+
+[[menu.main]]
+    name = "Luftaufnahmen"
+    url = "/luftaufnahmen"
+    weight = 3
+
+[[menu.main]]
+    name = "Über mich"
+    url = "/ueber-mich"
+    weight = 4
+
+[[module.imports]]
+  path = "github.com/halogenica/beautifulhugo"
