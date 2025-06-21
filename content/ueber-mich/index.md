@@ -42,7 +42,10 @@ Wir verbinden mit Bildern oft Emotionen, Erinnerungen und Sie erlauben uns für 
 
 Ich freue mich, mit Ihnen Erinnerungen und Geschichten festzuhalten, die Ihnen hoffentlich lange Freude bereiten werden.
 
-## Ein paar Impressionen
+## Meine Projekte
 
-{{< gallery caption-effect="fade" dir="/img/impressionen/" >}}
-{{< /gallery >}}
+Neben der Umsetzung Ihrer Ideen und Projekte, fotografiere ich auch für eigene, freie Projekte.
+Unter anderem:
+
+- [Analoge Fotografie](https://artofanalog.photo), da die Arbeit mit physischen Fotografien und teils über 100 Jahre alten Kameras und Verfahren eine besondere Magie entfaltet, wenn man am Ende eines langen Prozesses den Filmstreifen voller Erinnerungen und Momente in Händen hält.
+- [Unterwasser Fotografie](https://unterwasser.photo), da unsere Erde zum grossen Teil mit Wasser bedeckt ist und so viel von ihrer Schönheit im Verborgenen liegt. Diese Schönheit möglichst vielen Menschen zugänglich zu machen und nahezubringen ist mir ein sehr wichtiges Anliegen.
