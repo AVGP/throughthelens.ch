@@ -49,6 +49,10 @@ title = 'Through The Lens Photography by Martin Splitt'
     url = "/ueber-mich"
     weight = 4
 
+[markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe = true
+
 [[module.imports]]
   path = "github.com/halogenica/beautifulhugo"
 

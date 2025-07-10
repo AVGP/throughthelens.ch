@@ -19,3 +19,5 @@ wir finden gemeinsam kreative, spannende Wege deine Geschichte fotografisch fest
 
 {{< gallery caption-effect="fade" dir="/img/impressionen/" >}}
 {{< /gallery >}}
+
+<a style="display:none" rel="me" href="https://mastodon.social/@throughthelens">Mastodon</a>
