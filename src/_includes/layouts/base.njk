@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ photography.businessName }} | Modern, Elegant Portrait, Event & Aerial Photography</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Through The Lens Photography offers premium portrait sessions, comprehensive event coverage, and stunning aerial drone photography in Zurich. Book your custom photoshoot today.">
+  <meta name="keywords" content="photography, portrait photography, event photography, aerial photography, drone photography, Swiss photographer, Through The Lens">
+  <meta name="author" content="Through The Lens Photography">
+  <meta property="og:title" content="{{ photography.businessName }}">
+  <meta property="og:description" content="Capture your moments with modern, elegant portrait, event, and aerial drone photography. Book a session now.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/images/logo.png">
+  
+  <!-- Typography (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="main-header" id="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="logo-link">
+        <img src="/assets/images/logo.png" alt="{{ photography.businessName }} Logo" class="header-logo" id="header-logo-img">
+        <span class="business-name">{{ photography.businessName }}</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#portraits">Portraits</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#aerial">Aerial</a></li>
+          <li><a href="#instagram">Instagram</a></li>
+          <li><a href="#contact" class="nav-cta">Book a Session</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-nav-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav-menu" id="mobile-nav-menu" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#portraits" onclick="toggleMenu()">Portraits</a></li>
+        <li><a href="#events" onclick="toggleMenu()">Events</a></li>
+        <li><a href="#aerial" onclick="toggleMenu()">Aerial</a></li>
+        <li><a href="#instagram" onclick="toggleMenu()">Instagram</a></li>
+        <li><a href="#contact" class="mobile-nav-cta" onclick="toggleMenu()">Book a Session</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="/assets/images/logo.png" alt="{{ photography.businessName }} Logo" class="footer-logo">
+        <h3>{{ photography.businessName }}</h3>
+        <p class="tagline">Elegant storytelling through the lens.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Offerings</h4>
+        <ul>
+          <li><a href="#portraits">Portraits</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#aerial">Aerial & Drone</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Connect & Book</h4>
+        <p>Email: <a href="mailto:{{ photography.contact.email }}">{{ photography.contact.email }}</a></p>
+        <p>Phone: <a href="tel:{{ photography.contact.phone }}">{{ photography.contact.phone }}</a></p>
+        <p>Location: {{ photography.contact.address }}</p>
+        <p class="instagram-link">
+          Instagram: <a href="{{ photography.instagram.url }}" target="_blank" rel="noopener">{{ photography.instagram.handle }}</a>
+        </p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 {{ photography.businessName }}. All rights reserved. Crafted with elegance.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Nav Toggle JavaScript -->
+  <script>
+    const navToggle = document.getElementById('mobile-nav-toggle');
+    const navMenu = document.getElementById('mobile-nav-menu');
+
+    function toggleMenu() {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navMenu.setAttribute('aria-hidden', isExpanded);
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    }
+
+    navToggle.addEventListener('click', toggleMenu);
+  </script>
+
+  <!-- JavaScript Fallback for Scroll-Driven Animations -->
+  <script>
+    // Fallback for browsers that don't support scroll-driven animations (e.g., Firefox)
+    if (!CSS.supports('(animation-timeline: scroll()) and (animation-range: 0% 100%)')) {
+      const header = document.getElementById('site-header');
+      const initialHeight = 100;
+      const finalHeight = 70;
+      const scrollDistance = 120;
+
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const scrollPercent = Math.min(1, scrollY / scrollDistance);
+        const newHeight = initialHeight - (initialHeight - finalHeight) * scrollPercent;
+        
+        // Update header height
+        header.style.height = `${newHeight}px`;
+        
+        // Add a class when scrolled to handle background transitions
+        if (scrollY > 50) {
+          header.classList.add('scrolled-fallback');
+        } else {
+          header.classList.remove('scrolled-fallback');
+        }
+      });
+    }
+
+    // Fallback for entry scroll reveal animations (Intersection Observer)
+    if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            // Stop observing once revealed to avoid repetitive animations
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Target elements that should fade/slide in
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        observer.observe(el);
+      });
+    }
+  </script>
+</body>
+</html>

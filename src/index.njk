@@ -1,0 +1,334 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content reveal-on-scroll">
+    <div class="hero-logo-container">
+      <img src="/assets/images/logo-transparent.png" alt="Through The Lens Logo" class="hero-logo">
+    </div>
+    <h1 class="hero-title">Through The Lens</h1>
+    <p class="hero-subtitle">Elegant Portraits, Dynamic Events, and Cinematic Aerial Imagery</p>
+    <div class="hero-cta-group">
+      <a href="#contact" class="btn btn-primary">Book a Session</a>
+      <a href="#portraits" class="btn btn-secondary">Explore Offerings</a>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+      <span class="scroll-text">Scroll to Discover</span>
+    </div>
+  </div>
+</section>
+
+<!-- Portraits Section -->
+<section id="portraits" class="section portraits-section">
+  <div class="section-container">
+    <div class="section-header reveal-on-scroll">
+      <h2>{{ photography.offerings.portraits.title }}</h2>
+      <p class="section-desc">{{ photography.offerings.portraits.description }}</p>
+    </div>
+
+    <div class="category-gallery reveal-on-scroll">
+      {% for img in photography.offerings.portraits.gallery %}
+      <div class="category-gallery-item">
+        <img src="{{ img }}" alt="Portrait Session Preview" class="category-gallery-image">
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="packages-grid">
+      {% for pkg in photography.offerings.portraits.packages %}
+      <div class="package-card {% if pkg.popular %}popular{% endif %} reveal-on-scroll">
+        {% if pkg.popular %}
+        <div class="popular-badge">Most Popular</div>
+        {% endif %}
+        <div class="card-header">
+          <span class="duration">{{ pkg.duration }}</span>
+          <h3>{{ pkg.name }}</h3>
+          <div class="price-container">
+            <span class="currency">CHF</span>
+            <span class="price">{{ pkg.price }}</span>
+          </div>
+        </div>
+        <ul class="inclusions">
+          {% for item in pkg.includes %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        <div class="card-footer">
+          <a href="#contact" class="btn btn-card" onclick="selectPackage('Portraits: {{ pkg.name }}')">Select Package</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Events Section -->
+<section id="events" class="section events-section">
+  <div class="section-container">
+    <div class="section-header reveal-on-scroll">
+      <h2>{{ photography.offerings.events.title }}</h2>
+      <p class="section-desc">{{ photography.offerings.events.description }}</p>
+    </div>
+
+    <div class="category-gallery reveal-on-scroll">
+      {% for img in photography.offerings.events.gallery %}
+      <div class="category-gallery-item">
+        <img src="{{ img }}" alt="Event Session Preview" class="category-gallery-image">
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="packages-grid">
+      {% for pkg in photography.offerings.events.packages %}
+      <div class="package-card {% if pkg.popular %}popular{% endif %} reveal-on-scroll">
+        {% if pkg.popular %}
+        <div class="popular-badge">Most Popular</div>
+        {% endif %}
+        <div class="card-header">
+          <span class="duration">{{ pkg.duration }}</span>
+          <h3>{{ pkg.name }}</h3>
+          <div class="price-container">
+            <span class="currency">CHF</span>
+            <span class="price">{{ pkg.price }}</span>
+          </div>
+        </div>
+        <ul class="inclusions">
+          {% for item in pkg.includes %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        <div class="card-footer">
+          <a href="#contact" class="btn btn-card" onclick="selectPackage('Events: {{ pkg.name }}')">Select Package</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Aerial Section -->
+<section id="aerial" class="section aerial-section">
+  <div class="section-container">
+    <div class="section-header reveal-on-scroll">
+      <h2>{{ photography.offerings.aerial.title }}</h2>
+      <p class="section-desc">{{ photography.offerings.aerial.description }}</p>
+    </div>
+
+    <div class="category-gallery reveal-on-scroll">
+      {% for img in photography.offerings.aerial.gallery %}
+      <div class="category-gallery-item">
+        <img src="{{ img }}" alt="Aerial Session Preview" class="category-gallery-image">
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="packages-grid">
+      {% for pkg in photography.offerings.aerial.packages %}
+      <div class="package-card {% if pkg.popular %}popular{% endif %} reveal-on-scroll">
+        {% if pkg.popular %}
+        <div class="popular-badge">Most Popular</div>
+        {% endif %}
+        <div class="card-header">
+          <span class="duration">{{ pkg.duration }}</span>
+          <h3>{{ pkg.name }}</h3>
+          <div class="price-container">
+            <span class="currency">CHF</span>
+            <span class="price">{{ pkg.price }}</span>
+          </div>
+        </div>
+        <ul class="inclusions">
+          {% for item in pkg.includes %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        <div class="card-footer">
+          <a href="#contact" class="btn btn-card" onclick="selectPackage('Aerial: {{ pkg.name }}')">Select Package</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Instagram Section -->
+<section id="instagram" class="section instagram-section">
+  <div class="section-container">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-category">Social Feed</span>
+      <h2>From The Gallery</h2>
+      <p class="section-desc">Follow our journey and view our latest captures on Instagram <a href="{{ photography.instagram.url }}" target="_blank" rel="noopener" class="insta-handle">{{ photography.instagram.handle }}</a></p>
+    </div>
+
+    <div class="insta-grid reveal-on-scroll">
+      <a href="{{ photography.instagram.url }}" target="_blank" rel="noopener" class="insta-item">
+        <img src="/assets/images/insta_1.jpg" alt="Through The Lens Instagram Photo 1" class="insta-image">
+        <div class="insta-overlay">
+          <span class="insta-icon">📷</span>
+        </div>
+      </a>
+      <a href="{{ photography.instagram.url }}" target="_blank" rel="noopener" class="insta-item">
+        <img src="/assets/images/insta_2.jpg" alt="Through The Lens Instagram Photo 2" class="insta-image">
+        <div class="insta-overlay">
+          <span class="insta-icon">📷</span>
+        </div>
+      </a>
+      <a href="{{ photography.instagram.url }}" target="_blank" rel="noopener" class="insta-item">
+        <img src="/assets/images/insta_3.jpg" alt="Through The Lens Instagram Photo 3" class="insta-image">
+        <div class="insta-overlay">
+          <span class="insta-icon">📷</span>
+        </div>
+      </a>
+      <a href="{{ photography.instagram.url }}" target="_blank" rel="noopener" class="insta-item">
+        <img src="/assets/images/insta_4.jpg" alt="Through The Lens Instagram Photo 4" class="insta-image">
+        <div class="insta-overlay">
+          <span class="insta-icon">📷</span>
+        </div>
+      </a>
+      <a href="{{ photography.instagram.url }}" target="_blank" rel="noopener" class="insta-item">
+        <img src="/assets/images/insta_5.jpg" alt="Through The Lens Instagram Photo 5" class="insta-image">
+        <div class="insta-overlay">
+          <span class="insta-icon">📷</span>
+        </div>
+      </a>
+      <a href="{{ photography.instagram.url }}" target="_blank" rel="noopener" class="insta-item">
+        <img src="/assets/images/insta_6.jpg" alt="Through The Lens Instagram Photo 6" class="insta-image">
+        <div class="insta-overlay">
+          <span class="insta-icon">📷</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section id="contact" class="section contact-section">
+  <div class="section-container">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-category">Booking</span>
+      <h2>Begin Your Journey</h2>
+      <p class="section-desc">Fill out the details below to request a session. We'll get back to you within 24 hours to finalize details and confirm your date.</p>
+    </div>
+
+    <div class="contact-form-container reveal-on-scroll">
+      <form class="booking-form" id="booking-form" action="#" onsubmit="handleFormSubmit(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="client-name">Full Name</label>
+            <input type="text" id="client-name" name="name" required placeholder="John Doe" autocomplete="name">
+            <span class="error-msg">Please enter your name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="client-email">Email Address</label>
+            <input type="email" id="client-email" name="email" required placeholder="john@example.com" autocomplete="email">
+            <span class="error-msg">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="client-phone">Phone Number</label>
+            <input type="tel" id="client-phone" name="phone" placeholder="+41 79 123 45 67" autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="session-category">Session Category</label>
+            <select id="session-category" name="category" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="Portraits">Portrait Sessions</option>
+              <option value="Events">Event Coverage</option>
+              <option value="Aerial">Aerial & Drone Photography</option>
+              <option value="Custom">Custom Photo Shooting</option>
+            </select>
+            <span class="error-msg">Please select a shooting category.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="session-date">Preferred Date</label>
+            <input type="date" id="session-date" name="date" required>
+            <span class="error-msg">Please select a preferred date.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="session-details">Package details or special requests</label>
+            <input type="text" id="session-details" name="details" placeholder="e.g. Essential Portrait Package">
+          </div>
+        </div>
+
+        <div class="form-group textarea-group">
+          <label for="client-message">Tell us about your project</label>
+          <textarea id="client-message" name="message" rows="5" required placeholder="Describe the shoot location, details, style preferences..."></textarea>
+          <span class="error-msg">Please describe your session requirements.</span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-submit" id="submit-btn">Send Booking Request</button>
+        </div>
+        
+        <div class="form-response-success" id="form-success-msg" aria-hidden="true" style="display: none;">
+          <h4>Booking Request Sent Successfully!</h4>
+          <p>Thank you! We have received your booking inquiry and will review it. A photographer will be in touch with you shortly.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Script for interactivity -->
+<script>
+  // Pre-fill the booking details field when clicking package CTA
+  function selectPackage(packageName) {
+    const detailsInput = document.getElementById('session-details');
+    const categorySelect = document.getElementById('session-category');
+    
+    if (detailsInput) {
+      detailsInput.value = packageName;
+    }
+    
+    if (categorySelect) {
+      if (packageName.startsWith('Portraits:')) {
+        categorySelect.value = 'Portraits';
+      } else if (packageName.startsWith('Events:')) {
+        categorySelect.value = 'Events';
+      } else if (packageName.startsWith('Aerial:')) {
+        categorySelect.value = 'Aerial';
+      }
+    }
+  }
+
+  // Handle Contact Form Submission
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const form = document.getElementById('booking-form');
+    const successMsg = document.getElementById('form-success-msg');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (form.checkValidity()) {
+      // In a real application, you would send this data to a backend or serverless function
+      // e.g. using fetch('/api/book', { method: 'POST', body: new FormData(form) })
+      
+      // Simulate successful submission:
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Sending...';
+
+      setTimeout(() => {
+        form.reset();
+        submitBtn.style.display = 'none';
+        successMsg.style.display = 'block';
+        successMsg.setAttribute('aria-hidden', 'false');
+        
+        // Scroll slightly to reveal message fully
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 1200);
+    }
+  }
+
+  // Set min date for date selector to today
+  const dateInput = document.getElementById('session-date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+  }
+</script>

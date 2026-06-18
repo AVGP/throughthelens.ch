@@ -1,0 +1,163 @@
+{
+  "businessName": "Through The Lens Photography",
+  "instagram": {
+    "handle": "@throughthelens.ch",
+    "url": "https://instagram.com/throughthelens.ch"
+  },
+  "contact": {
+    "email": "hello@throughthelens.ch",
+    "phone": "+41 79 123 45 67",
+    "address": "Zurich, Switzerland"
+  },
+  "offerings": {
+    "portraits": {
+      "title": "Portrait Sessions",
+      "description": "Capturing your unique personality, style, and expression. Perfect for corporate headshots, creative portfolios, and lifestyle branding.",
+      "gallery": [
+        "/assets/images/portrait_1.jpg",
+        "/assets/images/portrait_2.jpg",
+        "/assets/images/portrait_3.jpg"
+      ],
+      "packages": [
+        {
+          "name": "Essential Portrait",
+          "price": "250",
+          "duration": "1 Hour",
+          "includes": [
+            "1 location (outdoor or indoor)",
+            "10 high-resolution edited digital images",
+            "Online viewing gallery",
+            "1-week delivery turn-around"
+          ],
+          "popular": false
+        },
+        {
+          "name": "Premium Portrait",
+          "price": "450",
+          "duration": "2 Hours",
+          "includes": [
+            "2 locations (outdoor or indoor)",
+            "25 high-resolution edited digital images",
+            "Multiple wardrobe changes",
+            "Online viewing gallery",
+            "Printing rights included"
+          ],
+          "popular": true
+        },
+        {
+          "name": "Editorial & Studio",
+          "price": "800",
+          "duration": "3 Hours",
+          "includes": [
+            "Studio session with lighting setup",
+            "40 fully retouched editorial images",
+            "Pre-session moodboard planning",
+            "High-resolution digital delivery",
+            "Professional print bundle (5x 8x10 prints)"
+          ],
+          "popular": false
+        }
+      ]
+    },
+    "events": {
+      "title": "Event Coverage",
+      "description": "Preserving the emotion, energy, and key moments of your special occasions, from corporate galas and product launches to private parties.",
+      "gallery": [
+        "/assets/images/event_1.jpg",
+        "/assets/images/event_2.jpg",
+        "/assets/images/event_3.jpg"
+      ],
+      "packages": [
+        {
+          "name": "Half-Day Coverage",
+          "price": "900",
+          "duration": "Up to 4 Hours",
+          "includes": [
+            "1 professional photographer",
+            "150+ color-corrected digital photos",
+            "Private online gallery for download",
+            "Next-day highlight preview (10 images)",
+            "Corporate or private events"
+          ],
+          "popular": false
+        },
+        {
+          "name": "Full-Day Coverage",
+          "price": "1600",
+          "duration": "Up to 8 Hours",
+          "includes": [
+            "1 professional photographer + assistant",
+            "350+ color-corrected digital photos",
+            "Private online gallery with download access",
+            "48-hour preview gallery (25 images)",
+            "Full commercial usage rights"
+          ],
+          "popular": true
+        },
+        {
+          "name": "Premium Gala Package",
+          "price": "2500",
+          "duration": "Custom Duration",
+          "includes": [
+            "2 professional photographers",
+            "500+ color-corrected digital photos",
+            "Express 24-hour full-gallery delivery",
+            "Step-and-repeat style coverage setup",
+            "Custom web portal for event guests to download"
+          ],
+          "popular": false
+        }
+      ]
+    },
+    "aerial": {
+      "title": "Aerial & Drone",
+      "description": "Stunning high-altitude views and cinematic video captures from licensed drone pilots. Ideal for commercial real estate, landscapes, and epic events.",
+      "gallery": [
+        "/assets/images/aerial_1.jpg",
+        "/assets/images/aerial_2.jpg",
+        "/assets/images/aerial_3.jpg"
+      ],
+      "packages": [
+        {
+          "name": "Property Showcase",
+          "price": "350",
+          "duration": "45 Mins Session",
+          "includes": [
+            "10 high-resolution aerial photos",
+            "4K video clips (raw footage)",
+            "Commercial real estate licensing",
+            "Fully licensed and insured UAV pilot",
+            "Fast 48-hour turn-around"
+          ],
+          "popular": false
+        },
+        {
+          "name": "Cinematic Aerial",
+          "price": "650",
+          "duration": "2 Hours Session",
+          "includes": [
+            "20 high-resolution aerial photos",
+            "1-minute fully edited 4K showcase video",
+            "Color grading and licensed background music",
+            "Multiple fly-over patterns (orbits, reveals)",
+            "Digital download in multiple formats"
+          ],
+          "popular": true
+        },
+        {
+          "name": "The Horizon Package",
+          "price": "1200",
+          "duration": "Full Day Drone Setup",
+          "includes": [
+            "Unlimited aerial photos & 4K/5.7K footage",
+            "3-minute cinematic video edit",
+            "Overlay branding & custom logo integration",
+            "Interior + exterior drone fly-through footage",
+            "Sound design & commercial license"
+          ],
+          "popular": false
+        }
+      ]
+    }
+  }
+}
