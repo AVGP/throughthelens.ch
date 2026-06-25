@@ -446,17 +446,17 @@ img {
 /* ==========================================================================
    Offerings & Packages
    ========================================================================== */
-.portraits-section {
+.personal-section {
   background-color: var(--color-bg);
 }
 
-.events-section {
+.corporate-section {
   background-color: var(--color-bg-offset);
-  border-top: 1px solid rgba(255, 255, 255, 0.02);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(61, 90, 69, 0.05);
+  border-bottom: 1px solid rgba(61, 90, 69, 0.05);
 }
 
-.aerial-section {
+.creative-section {
   background-color: var(--color-bg);
 }
 

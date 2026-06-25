@@ -10,13 +10,13 @@
     "address": "Zurich, Switzerland"
   },
   "offerings": {
-    "portraits": {
-      "title": "Portrait Sessions",
-      "description": "Capturing your unique personality, style, and expression. Perfect for corporate headshots, creative portfolios, and lifestyle branding.",
+    "personal": {
+      "title": "Personal Portraits",
+      "description": "Friendly, warm, and authentic portrait sessions designed to capture your unique personality. Perfect for lifestyle portfolios, couples, families, and milestones.",
       "gallery": [
-        "/assets/images/portrait_1.jpg",
-        "/assets/images/portrait_2.jpg",
-        "/assets/images/portrait_3.jpg"
+        "/assets/images/personal_1.jpg",
+        "/assets/images/personal_2.jpg",
+        "/assets/images/personal_3.jpg"
       ],
       "packages": [
         {
@@ -24,34 +24,34 @@
           "price": "250",
           "duration": "1 Hour",
           "includes": [
-            "1 location (outdoor or indoor)",
+            "1 location (outdoor or natural light indoor)",
             "10 high-resolution edited digital images",
-            "Online viewing gallery",
+            "Online viewing and download gallery",
             "1-week delivery turn-around"
           ],
           "popular": false
         },
         {
-          "name": "Premium Portrait",
+          "name": "Lifestyle Session",
           "price": "450",
           "duration": "2 Hours",
           "includes": [
-            "2 locations (outdoor or indoor)",
+            "2 locations (outdoor or home session)",
             "25 high-resolution edited digital images",
             "Multiple wardrobe changes",
             "Online viewing gallery",
-            "Printing rights included"
+            "Full printing rights included"
           ],
           "popular": true
         },
         {
-          "name": "Editorial & Studio",
-          "price": "800",
-          "duration": "3 Hours",
+          "name": "Family & Couples",
+          "price": "600",
+          "duration": "2.5 Hours",
           "includes": [
-            "Studio session with lighting setup",
-            "40 fully retouched editorial images",
-            "Pre-session moodboard planning",
+            "Family or couple lifestyle session",
+            "35 fully retouched digital images",
+            "Candid & posed photo combination",
             "High-resolution digital delivery",
             "Professional print bundle (5x 8x10 prints)"
           ],
@@ -59,101 +59,101 @@
         }
       ]
     },
-    "events": {
-      "title": "Event Coverage",
-      "description": "Preserving the emotion, energy, and key moments of your special occasions, from corporate galas and product launches to private parties.",
+    "corporate": {
+      "title": "Corporate Headshots",
+      "description": "Polished, confident, and professional headshots for corporate branding, executive teams, LinkedIn profiles, and resumes.",
       "gallery": [
-        "/assets/images/event_1.jpg",
-        "/assets/images/event_2.jpg",
-        "/assets/images/event_3.jpg"
+        "/assets/images/corporate_1.jpg",
+        "/assets/images/corporate_2.jpg",
+        "/assets/images/corporate_3.jpg"
       ],
       "packages": [
         {
-          "name": "Half-Day Coverage",
-          "price": "900",
-          "duration": "Up to 4 Hours",
+          "name": "Single Professional",
+          "price": "200",
+          "duration": "30 Mins Studio",
           "includes": [
-            "1 professional photographer",
-            "150+ color-corrected digital photos",
-            "Private online gallery for download",
-            "Next-day highlight preview (10 images)",
-            "Corporate or private events"
+            "Studio session with professional lighting",
+            "3 fully retouched digital headshots",
+            "LinkedIn & resume sizing optimized",
+            "Fast 48-hour digital delivery",
+            "Commercial usage rights"
           ],
           "popular": false
         },
         {
-          "name": "Full-Day Coverage",
-          "price": "1600",
-          "duration": "Up to 8 Hours",
+          "name": "Executive Branding",
+          "price": "450",
+          "duration": "90 Mins Session",
           "includes": [
-            "1 professional photographer + assistant",
-            "350+ color-corrected digital photos",
-            "Private online gallery with download access",
-            "48-hour preview gallery (25 images)",
-            "Full commercial usage rights"
+            "Studio + modern office backdrop locations",
+            "10 fully retouched digital headshots",
+            "Wardrobe consultation and changes",
+            "48-hour preview gallery for selection",
+            "Extended commercial usage rights"
           ],
           "popular": true
         },
         {
-          "name": "Premium Gala Package",
-          "price": "2500",
-          "duration": "Custom Duration",
+          "name": "Team & Corporate Day",
+          "price": "1500",
+          "duration": "Half-Day On-Site",
           "includes": [
-            "2 professional photographers",
-            "500+ color-corrected digital photos",
-            "Express 24-hour full-gallery delivery",
-            "Step-and-repeat style coverage setup",
-            "Custom web portal for event guests to download"
+            "Mobile studio setup at your corporate office",
+            "Individual headshots for up to 10 employees",
+            "1 group corporate team portrait",
+            "Retouching for 2 selected images per person",
+            "Full corporate media usage license"
           ],
           "popular": false
         }
       ]
     },
-    "aerial": {
-      "title": "Aerial & Drone",
-      "description": "Stunning high-altitude views and cinematic video captures from licensed drone pilots. Ideal for commercial real estate, landscapes, and epic events.",
+    "creative": {
+      "title": "Creative Portraits",
+      "description": "Artistic, stylized, and high-concept portraiture exploring unique themes, creative studio lighting, custom color grading, and editorial styling.",
       "gallery": [
-        "/assets/images/aerial_1.jpg",
-        "/assets/images/aerial_2.jpg",
-        "/assets/images/aerial_3.jpg"
+        "/assets/images/creative_1.jpg",
+        "/assets/images/creative_2.jpg",
+        "/assets/images/creative_3.jpg"
       ],
       "packages": [
         {
-          "name": "Property Showcase",
-          "price": "350",
-          "duration": "45 Mins Session",
+          "name": "Artistic Portfolio",
+          "price": "500",
+          "duration": "2 Hours Session",
           "includes": [
-            "10 high-resolution aerial photos",
-            "4K video clips (raw footage)",
-            "Commercial real estate licensing",
-            "Fully licensed and insured UAV pilot",
-            "Fast 48-hour turn-around"
+            "Creative concept consultation & planning",
+            "15 high-res edited fine art images",
+            "Custom color grading & texture adjustments",
+            "Ideal for actors, musicians, and models",
+            "Digital download and printing rights"
           ],
           "popular": false
         },
         {
-          "name": "Cinematic Aerial",
-          "price": "650",
-          "duration": "2 Hours Session",
+          "name": "Editorial Studio",
+          "price": "850",
+          "duration": "3 Hours Session",
           "includes": [
-            "20 high-resolution aerial photos",
-            "1-minute fully edited 4K showcase video",
-            "Color grading and licensed background music",
-            "Multiple fly-over patterns (orbits, reveals)",
-            "Digital download in multiple formats"
+            "High-end studio setup with creative lighting",
+            "25 fully retouched editorial images",
+            "Pre-session moodboard design",
+            "High-resolution digital delivery",
+            "Optional professional makeup artist add-on"
           ],
           "popular": true
         },
         {
-          "name": "The Horizon Package",
+          "name": "The Cinematic Concept",
           "price": "1200",
-          "duration": "Full Day Drone Setup",
+          "duration": "Full Day Project",
           "includes": [
-            "Unlimited aerial photos & 4K/5.7K footage",
-            "3-minute cinematic video edit",
-            "Overlay branding & custom logo integration",
-            "Interior + exterior drone fly-through footage",
-            "Sound design & commercial license"
+            "Custom location scouting & prop setup",
+            "30 cinematic style retouched images",
+            "Deep cinematic color palette grading",
+            "15-second moody cinematic video clip",
+            "Premium print portfolio case"
           ],
           "popular": false
         }
