@@ -12,7 +12,7 @@
   "offerings": {
     "personal": {
       "title": "Personal Portraits",
-      "description": "Friendly, warm, and authentic portrait sessions designed to capture your unique personality. Perfect for lifestyle portfolios, couples, families, and milestones.",
+      "description": "Friendly, warm, and authentic portrait sessions designed to capture your unique personality. Perfect for lifestyle portfolios, personal branding, and artistic milestones.",
       "gallery": [
         "/assets/images/personal_1.jpg",
         "/assets/images/personal_2.jpg",
@@ -20,40 +20,42 @@
       ],
       "packages": [
         {
-          "name": "Essential Portrait",
-          "price": "250",
-          "duration": "1 Hour",
+          "name": "Basic Portrait",
+          "price": "150",
+          "duration": "1.5 Hours",
           "includes": [
-            "1 location (outdoor or natural light indoor)",
-            "10 high-resolution edited digital images",
+            "1 location (outdoor or natural light)",
+            "1 outfit",
+            "3-5 edited high-resolution digital photos",
             "Online viewing and download gallery",
             "1-week delivery turn-around"
           ],
           "popular": false
         },
         {
-          "name": "Lifestyle Session",
-          "price": "450",
-          "duration": "2 Hours",
+          "name": "Personality Portrait",
+          "price": "250",
+          "duration": "3 Hours",
           "includes": [
-            "2 locations (outdoor or home session)",
-            "25 high-resolution edited digital images",
-            "Multiple wardrobe changes",
-            "Online viewing gallery",
+            "1 location (studio or on-location)",
+            "Up to 3 outfits",
+            "5-10 edited high-resolution digital photos",
+            "Online viewing and download gallery",
             "Full printing rights included"
           ],
           "popular": true
         },
         {
-          "name": "Family & Couples",
-          "price": "600",
-          "duration": "2.5 Hours",
+          "name": "Lifestyle Portrait",
+          "price": "450",
+          "duration": "4 Hours",
           "includes": [
-            "Family or couple lifestyle session",
-            "35 fully retouched digital images",
-            "Candid & posed photo combination",
-            "High-resolution digital delivery",
-            "Professional print bundle (5x 8x10 prints)"
+            "2 locations",
+            "Upfront moodboard and concept planning",
+            "Up to 3 outfits",
+            "10-20 edited high-resolution digital photos",
+            "Professional print bundle included",
+            "Full printing rights included"
           ],
           "popular": false
         }
