@@ -443,6 +443,12 @@ img {
   color: var(--color-text-muted);
 }
 
+@media (max-height: 680px), (max-width: 768px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
 /* ==========================================================================
    Offerings & Packages
    ========================================================================== */
