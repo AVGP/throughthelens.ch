@@ -283,6 +283,11 @@ layout: layouts/base.njk
           <h4>Booking Request Sent Successfully!</h4>
           <p>Thank you! We have received your booking inquiry and will review it. A photographer will be in touch with you shortly.</p>
         </div>
+
+        <div class="form-response-error" id="form-error-msg" aria-hidden="true" style="display: none; margin-top: 20px;">
+          <h4>Oops! Something went wrong.</h4>
+          <p>There was an error sending your booking request. Please try again later or contact us directly at <a href="mailto:{{ photography.contact.email }}">{{ photography.contact.email }}</a>.</p>
+        </div>
       </form>
     </div>
   </div>
@@ -315,21 +320,49 @@ layout: layouts/base.njk
     event.preventDefault();
     const form = document.getElementById('booking-form');
     const successMsg = document.getElementById('form-success-msg');
+    const errorMsg = document.getElementById('form-error-msg');
     const submitBtn = document.getElementById('submit-btn');
 
     if (form.checkValidity()) {
-      // Simulation:
       submitBtn.disabled = true;
       submitBtn.innerText = 'Sending...';
+      errorMsg.style.display = 'none';
+      errorMsg.setAttribute('aria-hidden', 'true');
 
-      setTimeout(() => {
-        form.reset();
-        submitBtn.style.display = 'none';
-        successMsg.style.display = 'block';
-        successMsg.setAttribute('aria-hidden', 'false');
-        
-        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 1200);
+      // Send to Formspree
+      fetch("https://formspree.io/f/xgojzyle", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          submitBtn.style.display = 'none';
+          successMsg.style.display = 'block';
+          successMsg.setAttribute('aria-hidden', 'false');
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              errorMsg.querySelector('p').innerText = data['errors'].map(error => error['message']).join(', ');
+            } else {
+              errorMsg.querySelector('p').innerHTML = 'There was an error sending your booking request. Please try again later or contact us directly at <a href="mailto:{{ photography.contact.email }}">{{ photography.contact.email }}</a>.';
+            }
+          });
+          throw new Error('Formspree response was not OK');
+        }
+      })
+      .catch(error => {
+        console.error('Error submitting booking request:', error);
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Send Booking Request';
+        errorMsg.style.display = 'block';
+        errorMsg.setAttribute('aria-hidden', 'false');
+        errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
     }
   }
 
