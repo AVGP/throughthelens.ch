@@ -372,4 +372,13 @@ layout: layouts/base.njk
     const today = new Date().toISOString().split('T')[0];
     dateInput.min = today;
   }
+
+  // Prefill package from localStorage if redirected from another page
+  window.addEventListener('DOMContentLoaded', () => {
+    const prefill = localStorage.getItem('prefillPackage');
+    if (prefill) {
+      selectPackage(prefill);
+      localStorage.removeItem('prefillPackage'); // Clear it
+    }
+  });
 </script>
