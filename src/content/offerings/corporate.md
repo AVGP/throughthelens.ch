@@ -9,7 +9,7 @@ gallery:
   - /assets/images/corporate_3.jpg
 packages:
   - name: Single Professional
-    price: 200
+    price: 250
     duration: 30 Mins Studio
     includes:
       - Studio session with professional lighting

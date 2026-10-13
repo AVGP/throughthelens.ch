@@ -9,7 +9,7 @@ gallery:
   - /assets/images/creative_3.jpg
 packages:
   - name: Artistic Concept
-    price: 100
+    price: 250
     duration: 1 Hour Session
     includes:
       - Creative concept consultation & planning
@@ -18,7 +18,7 @@ packages:
       - Express your creativity
       - Digital download
   - name: Artistic Portfolio
-    price: 400
+    price: 450
     duration: 3 Hours Session
     popular: true
     includes:

@@ -9,8 +9,8 @@ gallery:
   - /assets/images/personal_3.jpg
 packages:
   - name: Basic Portrait
-    price: 150
-    duration: 1.5 Hours
+    price: 200
+    duration: 30 Minutes
     includes:
       - 1 location (outdoor or natural light)
       - 1 outfit
@@ -18,8 +18,8 @@ packages:
       - Online viewing and download gallery
       - 1-week delivery turn-around
   - name: Personality Portrait
-    price: 250
-    duration: 3 Hours
+    price: 450
+    duration: 1.5 Hours
     popular: true
     includes:
       - 1 location (studio or on-location)
@@ -27,7 +27,7 @@ packages:
       - 5-10 edited high-resolution digital photos
       - Online viewing and download gallery
   - name: Lifestyle Portrait
-    price: 450
+    price: 650
     duration: 4 Hours
     includes:
       - 2 locations
