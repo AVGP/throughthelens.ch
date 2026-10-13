@@ -1,0 +1,36 @@
+{
+  "businessName": "Through The Lens Photography",
+  "tagline": "Elegant storytelling through the lens.",
+  "copyright": "© 2026 Through The Lens Photography. All rights reserved. Crafted with elegance.",
+  "seo": {
+    "title": "Through The Lens Photography | Modern, Elegant Portrait Photography & Headshots",
+    "description": "Through The Lens Photography offers premium personal portrait sessions, corporate headshots, and creative editorial portrait photography in Zurich. Book your custom photoshoot today.",
+    "keywords": "photography, portrait photography, personal portraits, corporate headshots, executive branding, creative portraits, Swiss photographer, Zurich, Through The Lens",
+    "ogDescription": "Capture your moments with modern, elegant personal, corporate, and creative portrait photography. Book a session now.",
+    "ogImage": "/assets/images/logo.png"
+  },
+  "instagram": {
+    "handle": "@throughthelens.ch",
+    "url": "https://instagram.com/throughthelens.ch"
+  },
+  "contact": {
+    "email": "hello@throughthelens.ch",
+    "address": "Zurich, Switzerland"
+  },
+  "formspreeEndpoint": "https://formspree.io/f/xgojzyle",
+  "nav": [
+    { "label": "Personal", "url": "/#personal" },
+    { "label": "Corporate", "url": "/#corporate" },
+    { "label": "Creative", "url": "/#creative" },
+    { "label": "Instagram", "url": "/#instagram" }
+  ],
+  "navCta": { "label": "Book a Session", "url": "/#contact" },
+  "footerLinks": {
+    "title": "Offerings",
+    "links": [
+      { "label": "Personal Portraits", "url": "/#personal" },
+      { "label": "Corporate Headshots", "url": "/#corporate" },
+      { "label": "Creative Portraits", "url": "/#creative" }
+    ]
+  }
+}

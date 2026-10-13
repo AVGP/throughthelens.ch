@@ -1,0 +1,22 @@
+{# Expects `pkg` and `category` #}
+<div class="package-card {% if pkg.popular %}popular{% endif %} reveal-on-scroll">
+  {% if pkg.popular %}
+  <div class="popular-badge">Most Popular</div>
+  {% endif %}
+  <div class="card-header">
+    <span class="duration">{{ pkg.duration }}</span>
+    <h3>{{ pkg.name }}</h3>
+    <div class="price-container">
+      <span class="currency">CHF</span>
+      <span class="price">{{ pkg.price }}</span>
+    </div>
+  </div>
+  <ul class="inclusions">
+    {% for item in pkg.includes %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  <div class="card-footer">
+    <a href="#contact" class="btn btn-card" onclick="selectPackage('{{ category }}: {{ pkg.name }}')">Select Package</a>
+  </div>
+</div>

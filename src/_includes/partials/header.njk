@@ -1,0 +1,28 @@
+  <header class="main-header" id="site-header">
+    <div class="nav-container">
+      <a href="/#hero" class="logo-link">
+        <img src="/assets/images/logo.png" alt="{{ site.businessName }} Logo" class="header-logo" id="header-logo-img">
+        <span class="business-name">{{ site.businessName }}</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          {% for item in site.nav %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {% endfor %}<li><a href="{{ site.navCta.url }}" class="nav-cta">{{ site.navCta.label }}</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-nav-menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-menu" id="mobile-nav-menu" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        {% for item in site.nav %}<li><a href="{{ item.url }}" onclick="toggleMenu()">{{ item.label }}</a></li>
+        {% endfor %}<li><a href="{{ site.navCta.url }}" class="mobile-nav-cta" onclick="toggleMenu()">{{ site.navCta.label }}</a></li>
+      </ul>
+    </nav>
+  </header>

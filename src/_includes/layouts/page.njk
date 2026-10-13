@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+{# Generic content page: hero from front matter, Markdown body split into sections at each `---` #}
+<section class="tfp-hero">
+  <div class="tfp-hero-overlay"></div>
+  <div class="tfp-hero-content reveal-on-scroll">
+    {% if hero.category %}<span class="tfp-hero-category">{{ hero.category }}</span>{% endif %}
+    <h1 class="tfp-hero-title">{{ hero.title }}</h1>
+    {% if hero.subtitle %}<p class="tfp-hero-subtitle">{{ hero.subtitle }}</p>{% endif %}
+  </div>
+</section>
+
+{% for part in content.split("<hr>") %}
+<section class="section {{ sectionClasses[loop.index0] }}">
+  <div class="section-container">
+    {% if loop.first and intro %}
+    <div class="section-header reveal-on-scroll">
+      {% if intro.category %}<span class="section-category">{{ intro.category }}</span>{% endif %}
+      <h2>{{ intro.title }}</h2>
+      {% if intro.text %}<p class="section-desc">{{ intro.text }}</p>{% endif %}
+    </div>
+    {% endif %}
+    {{ part | safe }}
+  </div>
+</section>
+{% endfor %}

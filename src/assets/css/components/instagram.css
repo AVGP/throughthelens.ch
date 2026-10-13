@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Instagram Section
+   ========================================================================== */
+.instagram-section {
+  background-color: var(--color-bg-offset);
+}
+
+.insta-handle {
+  color: var(--color-accent);
+  border-bottom: 1px solid transparent;
+  font-weight: 500;
+}
+
+.insta-handle:hover {
+  border-color: var(--color-accent);
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.insta-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: var(--color-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.insta-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.insta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 12, 16, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.insta-icon {
+  font-size: 1.5rem;
+  transform: scale(0.8);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.insta-item:hover .insta-image {
+  transform: scale(1.08);
+}
+
+.insta-item:hover .insta-overlay {
+  opacity: 1;
+}
+
+.insta-item:hover .insta-icon {
+  transform: scale(1);
+}
+

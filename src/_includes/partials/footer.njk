@@ -1,0 +1,30 @@
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="/assets/images/logo.png" alt="{{ site.businessName }} Logo" class="footer-logo">
+        <h3>{{ site.businessName }}</h3>
+        <p class="tagline">{{ site.tagline }}</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>{{ site.footerLinks.title }}</h4>
+        <ul>
+          {% for item in site.footerLinks.links %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Connect &amp; Book</h4>
+        <p>Email: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+        <p>Location: {{ site.contact.address }}</p>
+        <p class="instagram-link">
+          Instagram: <a href="{{ site.instagram.url }}" target="_blank" rel="noopener">{{ site.instagram.handle }}</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>{{ site.copyright }}</p>
+    </div>
+  </footer>

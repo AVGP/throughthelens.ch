@@ -1,0 +1,20 @@
+<section id="instagram" class="section instagram-section">
+  <div class="section-container">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-category">{{ instagram.category }}</span>
+      <h2>{{ instagram.title }}</h2>
+      <p class="section-desc">{{ instagram.intro }} <a href="{{ site.instagram.url }}" target="_blank" rel="noopener" class="insta-handle">{{ site.instagram.handle }}</a></p>
+    </div>
+
+    <div class="insta-grid reveal-on-scroll">
+      {% for img in instagram.images %}
+      <a href="{{ site.instagram.url }}" target="_blank" rel="noopener" class="insta-item">
+        <img src="{{ img }}" alt="Through The Lens Instagram Photo {{ loop.index }}" class="insta-image">
+        <div class="insta-overlay">
+          <span class="insta-icon">📷</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

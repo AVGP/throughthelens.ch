@@ -1,0 +1,77 @@
+<section id="contact" class="section contact-section">
+  <div class="section-container">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-category">{{ booking.category }}</span>
+      <h2>{{ booking.title }}</h2>
+      <p class="section-desc">{{ booking.intro }}</p>
+    </div>
+
+    <div class="contact-form-container reveal-on-scroll">
+      <form class="booking-form" id="booking-form" action="{{ site.formspreeEndpoint }}" method="POST"
+            data-email="{{ site.contact.email }}" data-submit-label="{{ booking.submitLabel }}"
+            onsubmit="handleFormSubmit(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="client-name">Full Name</label>
+            <input type="text" id="client-name" name="name" required placeholder="John Doe" autocomplete="name">
+            <span class="error-msg">Please enter your name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="client-email">Email Address</label>
+            <input type="email" id="client-email" name="email" required placeholder="john@example.com" autocomplete="email">
+            <span class="error-msg">Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="client-phone">Phone Number</label>
+            <input type="tel" id="client-phone" name="phone" placeholder="+41 79 123 45 67" autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="session-category">Session Category</label>
+            <select id="session-category" name="category" required>
+              <option value="" disabled selected>Select an option</option>
+              {% for offering in collections.offerings %}
+              <option value="{{ offering.data.id | capitalize }}">{{ offering.data.title }}</option>
+              {% endfor %}
+              <option value="Custom">{{ booking.customOption }}</option>
+            </select>
+            <span class="error-msg">Please select a shooting category.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="session-date">Preferred Date</label>
+            <input type="date" id="session-date" name="date" required>
+            <span class="error-msg">Please select a preferred date.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="session-details">Package details or special requests</label>
+            <input type="text" id="session-details" name="details" placeholder="e.g. Lifestyle Session Package">
+          </div>
+        </div>
+
+        <div class="form-group textarea-group">
+          <label for="client-message">Tell us about your project</label>
+          <textarea id="client-message" name="message" rows="5" required placeholder="Describe the shoot location, details, style preferences..."></textarea>
+          <span class="error-msg">Please describe your session requirements.</span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-submit" id="submit-btn">{{ booking.submitLabel }}</button>
+        </div>
+
+        <div class="form-response-success" id="form-success-msg" aria-hidden="true" style="display: none;">
+          <h4>{{ booking.successTitle }}</h4>
+          <p>{{ booking.successText }}</p>
+        </div>
+
+        <div class="form-response-error" id="form-error-msg" aria-hidden="true" style="display: none; margin-top: 20px;">
+          <h4>{{ booking.errorTitle }}</h4>
+          <p>There was an error sending your booking request. Please try again later or contact us directly at <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

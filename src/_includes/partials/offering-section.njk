@@ -1,0 +1,24 @@
+{# Expects `offering` (an item from collections.offerings) #}
+{% set category = offering.data.id | capitalize %}
+<section id="{{ offering.data.id }}" class="section {{ offering.data.id }}-section">
+  <div class="section-container">
+    <div class="section-header reveal-on-scroll">
+      <h2>{{ offering.data.title }}</h2>
+      <p class="section-desc">{{ offering.rawInput | trim | mdInline | safe }}</p>
+    </div>
+
+    <div class="category-gallery reveal-on-scroll">
+      {% for img in offering.data.gallery %}
+      <div class="category-gallery-item">
+        <img src="{{ img }}" alt="{{ offering.data.galleryAlt }}" class="category-gallery-image">
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="packages-grid">
+      {% for pkg in offering.data.packages %}
+        {% include "partials/package-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
