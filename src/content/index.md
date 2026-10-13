@@ -27,10 +27,10 @@ instagram:
 booking:
   category: Booking
   title: Begin Your Journey
-  intro: Fill out the details below to request a session. We'll get back to you within 24 hours to finalize details and confirm your date.
+  intro: Fill out the details below to request a session. I'll get back to you within 24 hours to finalize details and confirm your date.
   submitLabel: Send Booking Request
   successTitle: Booking Request Sent Successfully!
-  successText: Thank you! We have received your booking inquiry and will review it. We'll get back to you shortly.
+  successText: Thank you! I have received your booking inquiry and will review it. I'll get back to you shortly.
   errorTitle: Oops! Something went wrong.
   customOption: Custom Photo Shooting
 ---
